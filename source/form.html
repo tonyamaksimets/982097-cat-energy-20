@@ -24,7 +24,113 @@
     </header>
 
     <main class="page-main">
+      <h1 class="page-main__title">Подбор программы</h1>
+      <p class="page-main__slogan">Заполните анкету, и мы подберем программу питания для вашего кота</p>
 
+      <section class="questionnaire">
+        <form class="questionnaire__form form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Основные данные кота</legend>
+            <p class="form__field-block">
+              <label class="form__label" for="cat-name-input">Имя:*</label>
+              <input class="form__text-field" id="cat-name-input" type="text" name="cat-name" placeholder="Барсик" required>
+            </p>
+
+            <p class="form__field-block">
+              <label class="form__label" for="cat-weight-input">Вес (кг):*</label>
+              <input class="form__text-field" id="cat-weight-input" type="text" name="cat-weight" placeholder="7" required>
+            </p>
+
+            <p class="form__field-block">
+              <label class="form__label" for="cat-age-input">Возраст (лет):</label>
+              <input class="form__text-field" id="cat-age-input" type="text" name="cat-age" placeholder="7">
+            </p>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="visually-hidden">Выбор программы питания</legend>
+            <ul class="form__list">
+              <li class="form__field-block form__field-block--radio">
+                <input class="form__radio-field visually-hidden" type="radio" name="food-programm" value="slim" id="slim-input" checked>
+                <label class="form__label" for="slim-input">Похудение</label>
+              </li>
+
+              <li class="form__field-block form__field-block--radio">
+                <input class="form__radio-field visually-hidden" type="radio" name="food-programm" value="pro" id="pro-input">
+                <label class="form__label" for="pro-input">Набор массы</label>
+              </li>
+
+              <li class="form__field-block form__field-block--radio">
+                <input class="form__radio-field visually-hidden" type="radio" name="food-programm" value="needhelp" id="needhelp-input">
+                <label class="form__label" for="needhelp-input">Не знаю (нужен Ваш совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__fieldset form__fieldset--auxiliary">
+            <legend class="form__fieldset-legend">Контактные данные (владельца кота)</legend>
+            <p class="form__field-block">
+              <label class="form__label" for="email-input">E-mail:*</label>
+              <input class="form__text-field" id="email-input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+            </p>
+
+            <p class="form__field-block">
+              <label class="form__label" for="tel-input">Телефон:*</label>
+              <input class="form__text-field" id="tel-input" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            </p>
+          </fieldset>
+
+          <fieldset class="form__fieldset form__fieldset--auxiliary">
+            <legend class="form__fieldset-legend">Комментарий</legend>
+            <p class="form__field-block">
+              <label class="visually-hidden" for="comment-input">Текст комментария:</label>
+              <textarea class="form__text-field form__text-field--textarea" id="comment-input" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </p>
+          </fieldset>
+
+          <fieldset class="form__fieldset">
+            <legend class="form__fieldset-legend">Дополнительно</legend>
+            <ul class="form__list">
+              <li class="form__field-block form__field-block--checkbox">
+                <input class="form__checkbox-field visually-hidden" type="checkbox" name="sugarsubstitute" id="sugarsubstitute-input" checked>
+                <label class="form__label" for="sugarsubstitute-input">Сахарозаменитель</label>
+              </li>
+
+              <li class="form__field-block form__field-block--checkbox">
+                <input class="form__checkbox-field visually-hidden" type="checkbox" name="water" id="water-input">
+                <label class="form__label" for="water-input">Питьевая вода</label>
+              </li>
+
+              <li class="form__field-block form__field-block--checkbox">
+                <input class="form__checkbox-field visually-hidden" type="checkbox" name="milk" id="milk-input">
+                <label class="form__label" for="milk-input">Молоко</label>
+              </li>
+
+              <li class="form__field-block form__field-block--checkbox">
+                <input class="form__checkbox-field visually-hidden" type="checkbox" name="vitamins" id="vitamins-input">
+                <label class="form__label" for="vitamins-input">Витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button class="form__button button" type="submit">Отправить заявку</button>
+
+          <p class="form__legend">* — Обязательные поля</p>
+        </form>
+      </section>
+
+      <section class="contacts">
+        <h2 class="visually-hidden">Контакты</h2>
+        <div class="contacts__text-info">
+          <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
+          <p class="contacts__address">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург</p>
+        </div>
+
+        <div class="contacts__map-block">
+          <iframe class="contacts__interactive-map" src="https://yandex.ru/map-widget/v1/-/CCQdjBEOcB" width="100%" height="362" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+          <img class="contacts__image-map" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+        </div>
+      </section>
     </main>
 
     <footer class="page-footer">
