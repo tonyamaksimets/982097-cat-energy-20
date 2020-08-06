@@ -1,0 +1,21 @@
+.page {
+  height: 100%;
+
+  //для отладки мобильной версии
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+
+  min-height: 100%;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Arial", sans-serif;
+  color: $basic-text-color;
+}

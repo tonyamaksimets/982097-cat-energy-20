@@ -1,0 +1,32 @@
+.page-main__wrapper {
+  padding-top: 27px;
+  padding-left: 20px;
+  padding-bottom: 22px;
+  padding-right: 20px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $light-text-color;
+
+  background-image: url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient($accent-color 305px, $basic-background-color 305px);
+  background-repeat: no-repeat;
+}
+
+.page-main__title {
+  @include title-style-reset;
+
+  margin-bottom: 22px;
+
+  font-size: 36px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.page-main__slogan {
+  @include paragraph-style-reset;
+
+  margin-bottom: 25px;
+
+  text-align: center;
+  text-transform: uppercase;
+}

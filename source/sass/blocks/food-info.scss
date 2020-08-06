@@ -1,0 +1,65 @@
+.food-info {
+  padding-top: 27px;
+  padding-right: 20px;
+  padding-bottom: 42px;
+  padding-left: 20px;
+}
+
+.food-info__tagline {
+  @include title-style-reset;
+
+  margin-bottom: 38px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
+}
+
+.food-info__list {
+  @include list-style-reset;
+}
+
+.food-info__item {
+  position: relative;
+
+  min-height: 60px;
+  padding-left: 80px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 60px;
+    height: 60px;
+
+    background-color: $accent-color;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &--healthy::before {
+    background-image: url("../img/advantage-leaf@1x.png");
+  }
+
+  &--simple::before {
+    background-image: url("../img/advantage-powder@1x.png");
+  }
+
+  &--partial::before {
+    background-image: url("../img/advantage-dining@1x.png");
+  }
+
+  &--effective::before {
+    background-image: url("../img/advantage-clock@1x.png");
+  }
+}
