@@ -3,9 +3,7 @@
 }
 
 .page-main__wrapper {
-  padding-left: 20px;
   padding-bottom: 22px;
-  padding-right: 20px;
 
   color: $light-text-color;
 
@@ -18,8 +16,6 @@
   @include title-style-reset;
 
   margin-bottom: 40px;
-  padding-left: 20px;
-  padding-right: 20px;
 
   font-size: 36px;
   line-height: 36px;
