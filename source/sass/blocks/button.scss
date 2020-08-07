@@ -24,7 +24,20 @@
 
   &:active {
     color: rgba($light-text-color, 0.3);
+  }
 
-    background-color: $dark-accent-color;
+  &--no-accent {
+    color: $basic-text-color;
+
+    background-color: $light-special-background-color;
+
+    &:hover,
+    &:focus {
+      background-color: $special-gray-color;
+    }
+
+    &:active {
+      color: rgba($basic-text-color, 0.3);
+    }
   }
 }

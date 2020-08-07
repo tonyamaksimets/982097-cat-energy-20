@@ -1,0 +1,57 @@
+.cat-food-card {
+  display: flex;
+}
+
+.cat-food-card__link {
+  @include link-style-reset;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+}
+
+.cat-food-card__image {
+  vertical-align: bottom;
+}
+
+.cat-food-card__wrapper {
+  width: 140px;
+}
+
+.cat-food-card__name {
+  @include title-style-reset;
+
+  margin-top: 20px;
+  margin-bottom: 13px;
+  width: 80px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $special-text-color;
+  text-transform: uppercase;
+}
+
+.cat-food-card__table {
+  width: 100%;
+
+  font-size: 12px;
+  line-height: 16px;
+
+  border-collapse: collapse;
+}
+
+.cat-food-card__property-name {
+  padding: 0;
+}
+
+.cat-food-card__property-value {
+  padding: 0;
+
+  float: right;
+}

@@ -1,5 +1,9 @@
 .page-header {
   position: relative;
+
+  &--bordered {
+    border-bottom: 1px solid $border-color;
+  }
 }
 
 .page-header__logo {

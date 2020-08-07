@@ -34,6 +34,10 @@
   @include list-style-reset;
 
   clear: right;
+
+  &--closed {
+    display: none;
+  }
 }
 
 .main-nav__item {
@@ -62,11 +66,11 @@
 
   &[href]:hover,
   &[href]:focus {
-    color: rgba($dark-text-color, 0.6);
+    opacity: 0.6;
   }
 
   &[href]:active {
-    color: rgba($dark-text-color, 0.3);
+    opacity: 0.3;;
   }
 
   &--active {
