@@ -1,8 +1,5 @@
-.page-main {
-  padding-top: 27px;
-}
-
 .page-main__wrapper {
+  padding-top: 27px;
   padding-bottom: 22px;
 
   color: $light-text-color;
@@ -15,6 +12,7 @@
 .page-main__title {
   @include title-style-reset;
 
+  margin-top: 27px;
   margin-bottom: 40px;
 
   font-size: 36px;
@@ -23,8 +21,8 @@
   color: $dark-text-color;
 
   &--wrapped {
+    margin-top: 0;
     margin-bottom: 22px;
-    padding: 0;
 
     color: inherit;
     text-align: center;
