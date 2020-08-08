@@ -3,9 +3,11 @@
   padding-bottom: 22px;
 
   color: $light-text-color;
+  text-align: center;
 
   background-image: url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient($accent-color 305px, $basic-background-color 305px);
+    linear-gradient($dark-accent-color 305px, $basic-background-color 305px);
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
@@ -25,7 +27,6 @@
     margin-bottom: 22px;
 
     color: inherit;
-    text-align: center;
   }
 }
 
@@ -35,6 +36,5 @@
   margin-bottom: 25px;
 
   font-family: "Oswald", "Arial", sans-serif;
-  text-align: center;
   text-transform: uppercase;
 }
