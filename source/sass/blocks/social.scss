@@ -1,0 +1,30 @@
+.social {
+  @include list-style-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+}
+
+.social__link {
+  display: block;
+  padding: 20px;
+
+  &:hover .social__image,
+  &:focus .social__image {
+    fill: $accent-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__image {
+  display: block;
+}

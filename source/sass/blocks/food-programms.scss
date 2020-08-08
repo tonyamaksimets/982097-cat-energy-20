@@ -1,0 +1,114 @@
+.food-programms__list {
+  @include list-style-reset;
+}
+
+.food-programms__item {
+  position: relative;
+
+  padding-top: 30px;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+
+  background-color: $light-special-background-color;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 24px;
+    left: 22px;
+
+    display: block;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+    background-color: $accent-color;
+  }
+
+  &--slim::after {
+    content: url("../img/icon-cat-slim.svg");
+
+    position: absolute;
+    top: 21px;
+    left: 29px;
+
+    display: block;
+    width: 36px;
+  }
+
+  &--pro::after {
+    content: url("../img/icon-cat-pro.svg");
+
+    position: absolute;
+    top: 35px;
+    left: 13px;
+
+    display: block;
+    width: 67px;
+  }
+}
+
+.food-programms__name {
+  @include title-style-reset;
+
+  margin-left: 71px;
+  margin-bottom: 29px;
+
+  font-size: 24px;
+  line-height: 37px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $dark-text-color;
+}
+
+.food-programms__description {
+  @include paragraph-style-reset;
+
+  padding-bottom: 23px;
+
+  border-bottom: 1px solid $border-color;
+}
+
+.food-programms__link {
+  @include link-style-reset;
+
+  position: relative;
+
+  display: block;
+  padding-top: 19px;
+  padding-bottom: 22px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $dark-text-color;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: url("../img/icon-right-arrow-long.svg");
+
+    position: absolute;
+    top: 18px;
+
+    width: 24px;
+    margin-left: 15px;
+  }
+
+  &:hover::after,
+  &:active::after {
+    content: url("../img/icon-right-arrow-verylong.svg");
+
+    width: 32px;
+  }
+}

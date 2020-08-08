@@ -1,0 +1,32 @@
+.show-more {
+  padding-top: 26px;
+
+  text-align: center;
+
+  &::before {
+    content: url("../img/icon-plus.svg");
+
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 23px;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.show-more__description {
+  margin-bottom: 8px;
+
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-special-text-color;
+  text-transform: uppercase;
+}
+
+.show-more__slogan {
+  margin-bottom: 21px;
+
+  font-size: 12px;
+  line-height: 16px;
+}

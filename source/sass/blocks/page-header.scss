@@ -1,0 +1,22 @@
+.page-header {
+  position: relative;
+
+  &--bordered {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
+  }
+}

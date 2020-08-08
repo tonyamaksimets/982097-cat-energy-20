@@ -1,0 +1,40 @@
+.page-main__wrapper {
+  padding-top: 27px;
+  padding-bottom: 22px;
+
+  color: $light-text-color;
+  text-align: center;
+
+  background-image: url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient($dark-accent-color 305px, $basic-background-color 305px);
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.page-main__title {
+  @include title-style-reset;
+
+  margin-top: 27px;
+  margin-bottom: 40px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
+
+  &--wrapped {
+    margin-top: 0;
+    margin-bottom: 22px;
+
+    color: inherit;
+  }
+}
+
+.page-main__slogan {
+  @include paragraph-style-reset;
+
+  margin-bottom: 25px;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+}

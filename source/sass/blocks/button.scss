@@ -1,0 +1,43 @@
+.button {
+  @include link-style-reset;
+
+  display: block;
+
+  padding-top: 11px;
+  padding-right: 15px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $light-text-color;
+
+  background-color: $accent-color;
+
+  &:hover,
+  &:focus {
+    background-color: $dark-accent-color;
+  }
+
+  &:active {
+    color: rgba($light-text-color, 0.3);
+  }
+
+  &--no-accent {
+    color: $basic-text-color;
+
+    background-color: $light-special-background-color;
+
+    &:hover,
+    &:focus {
+      background-color: $special-gray-color;
+    }
+
+    &:active {
+      color: rgba($basic-text-color, 0.3);
+    }
+  }
+}

@@ -1,0 +1,79 @@
+.main-nav__toggle {
+  @include button-style-reset;
+
+  display: block;
+  float: right;
+
+  width: 66px;
+  height: 66px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--open {
+    background-image: url("../img/icon-mobile-menu.svg");
+    background-size: 24px 16px;
+  }
+
+  &--close {
+    background-image: url("../img/icon-close.svg");
+    background-size: 18px 18px;
+  }
+}
+
+.main-nav__list {
+  @include list-style-reset;
+
+  clear: right;
+
+  &--closed {
+    display: none;
+  }
+}
+
+.main-nav__item {
+  padding-top: 18px;
+  padding-right: 20px;
+  padding-bottom: 17px;
+  padding-left: 20px;
+
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  color: $dark-text-color;
+
+  border-bottom: 1px solid $light-border-color;
+
+  &:first-child {
+    border-top: 1px solid $light-border-color;
+  }
+}
+
+.main-nav__link {
+  @include link-style-reset;
+
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  &--active {
+    border-bottom: 2px solid $accent-color;
+  }
+}
