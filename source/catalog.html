@@ -244,12 +244,12 @@
 
       <section class="additional-products">
         <h2 class="additional-products__title">Дополнительные товары</h2>
-        <ul class="additional-products__list">
+        <ul class="additional-products__list layout-wrapper">
           <li class="additional-products__item">
             <article class="additional-product-card">
-              <a class="additional-product-card__link" href="#">
-                <h3 class="additional-product-card__name">Сахарозаменитель</h3>
-              </a>
+              <h3 class="additional-product-card__name">
+                <a class="additional-product-card__link" href="#">Сахарозаменитель</a>
+              </h3>
 
               <table class="additional-product-card__table">
                 <tr class="additional-product-card__propertis">
@@ -262,9 +262,9 @@
           </li>
           <li class="additional-products__item">
             <article class="additional-product-card">
-              <a class="additional-product-card__link" href="#">
-                <h3 class="additional-product-card__name">Питьевая вода</h3>
-              </a>
+              <h3 class="additional-product-card__name">
+                <a class="additional-product-card__link" href="#">Питьевая вода</a>
+              </h3>
 
               <table class="additional-product-card__table">
                 <tr class="additional-product-card__propertis">
@@ -277,9 +277,9 @@
           </li>
           <li class="additional-products__item">
             <article class="additional-product-card">
-              <a class="additional-product-card__link" href="#">
-                <h3 class="additional-product-card__name">Молоко</h3>
-              </a>
+              <h3 class="additional-product-card__name">
+                <a class="additional-product-card__link" href="#">Молоко</a>
+              </h3>
 
               <table class="additional-product-card__table">
                 <tr class="additional-product-card__propertis">
@@ -292,9 +292,9 @@
           </li>
           <li class="additional-products__item">
             <article class="additional-product-card">
-              <a class="additional-product-card__link" href="#">
-                <h3 class="additional-product-card__name">Витамины</h3>
-              </a>
+              <h3 class="additional-product-card__name">
+                <a class="additional-product-card__link" href="#">Витамины</a>
+              </h3>
 
               <table class="additional-product-card__table">
                 <tr class="additional-product-card__propertis">
@@ -307,21 +307,24 @@
           </li>
         </ul>
 
-        <div class="additional-products__promo">
-          <p class="additional-products__promo-description">Закажите все и получите чехол для кота в подарок!</p>
+        <div class="additional-products__promo layout-wrapper">
+          <p class="additional-products__promo-description layout-wrapper">Закажите все и получите чехол для кота в подарок!</p>
         </div>
       </section>
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__text-info">
+        <div class="contacts__text-info contacts__text-info--dark layout-wrapper">
           <p class="contacts__slogan">Приглашаем к сотрудничеству дилеров!</p>
           <p class="contacts__address">ул.&nbsp;Большая Конюшенная, д.&nbsp;19/8 Санкт-Петербург</p>
         </div>
 
         <div class="contacts__map-block">
-          <iframe class="contacts__interactive-map" src="https://yandex.ru/map-widget/v1/-/CCQdjBEOcB" width="100%" height="362" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-          <img class="contacts__image-map" src="https://via.placeholder.com/150x150" width="150" height="150" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+          <iframe class="contacts__interactive-map" src="https://yandex.ru/map-widget/v1/-/CCQdjBEOcB" width="100%" height="400" title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
+          <div class="contacts__image-map-wrapper">
+            <img class="contacts__image-map" src="img/bg-map-mobile@1x.png" width="320" height="400" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+            <img class="contacts__image-map-pin" src="img/map-pin.png" width="124" height="106" alt="">
+          </div>
         </div>
       </section>
     </main>

@@ -3,6 +3,10 @@
   justify-content: space-between;
   padding-top: 28px;
   padding-bottom: 22px;
+
+  &--dark {
+    background-color: $light-special-background-color;
+  }
 }
 
 .contacts__slogan {

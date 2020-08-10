@@ -1,0 +1,118 @@
+.additional-products {
+  padding-top: 28px;
+  padding-bottom: 35px;
+}
+
+.additional-products__title {
+  @include title-style-reset;
+
+  position: relative;
+
+  display: flex;
+  margin-left: 22px;
+  margin-bottom: 35px;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
+
+  overflow: hidden;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: -70px;
+
+    display: block;
+    width: 70px;
+    height: 20px;
+
+    background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
+  }
+
+  &::after {
+    content: "";
+
+    flex-grow: 1;
+    margin-left: 22px;
+
+    background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
+  }
+}
+
+.additional-products__list {
+  @include list-style-reset;
+}
+
+.additional-products__item {
+  padding-top: 13px;
+  padding-bottom: 19px;
+
+  border-bottom: 1px solid $table-border-color;
+
+  &:first-child {
+    border-top: 1px solid $table-border-color;
+  }
+}
+
+.additional-product-card__name {
+  @include title-style-reset;
+
+  margin-bottom: 13px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $special-text-color;
+  text-transform: uppercase;
+}
+
+.additional-product-card__link {
+  @include link-style-reset;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.additional-product-card__table {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.additional-product-card__price {
+  float: right;
+}
+
+.additional-products__promo-description {
+  padding-top: 58px;
+  padding-right: 58px;
+  padding-bottom: 43px;
+  padding-left: 58px;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $light-text-color;
+  text-align: center;
+
+  background-color: $accent-color;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: url("../img/icon-gift.svg");
+
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 48px;
+    width: 56px;
+  }
+}
