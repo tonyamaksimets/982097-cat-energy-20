@@ -15,7 +15,6 @@
 
 .page-main__title {
   @include title-style-reset;
-
   @include layout-wrapper;
 
   margin-top: 27px;
@@ -37,7 +36,6 @@
 
 .page-main__slogan {
   @include paragraph-style-reset;
-
   @include layout-wrapper;
 
   margin-bottom: 25px;

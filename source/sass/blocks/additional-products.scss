@@ -5,7 +5,6 @@
 
 .additional-products__title {
   @include title-style-reset;
-
   @include caption-decoration;
 
   margin-bottom: 35px;
@@ -18,7 +17,6 @@
 
 .additional-products__list {
   @include list-style-reset;
-
   @include layout-wrapper;
 }
 

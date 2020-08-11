@@ -25,7 +25,6 @@
 
 .form__field-block {
   @include paragraph-style-reset;
-
   @include layout-wrapper;
 
   position: relative;
@@ -197,7 +196,6 @@
 
 .form__legend {
   @include paragraph-style-reset;
-
   @include layout-wrapper;
 
   color: $dark-text-color;
