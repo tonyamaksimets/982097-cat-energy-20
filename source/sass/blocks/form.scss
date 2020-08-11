@@ -18,8 +18,8 @@
     padding-top: 22px;
     padding-bottom: 22px;
 
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $form-border-color;
+    border-bottom: 1px solid $form-border-color;
   }
 }
 
@@ -72,12 +72,12 @@
       width: 28px;
       height: 28px;
 
-      border: 1px solid $table-border-color;
+      border: 1px solid $form-checkbox-color;
     }
 
     &:hover::before,
     &:focus::before {
-      border-color: $input-color;
+      border-color: $form-checkbox-hover-color;
     }
   }
 
@@ -101,15 +101,14 @@
   padding-left: 15px;
   flex-grow: 1;
 
-  background-color: $basic-background-color;
-  border: 1px solid $form-border-color;
+  border: 1px solid $form-field-color;
 
   &:hover {
-    border-color: $table-border-color;
+    border-color: $form-field-hover-color;
   }
 
   &:focus {
-    border-color: $basic-text-color;
+    border-color: $form-field-focus-color;
     outline: none;
   }
 

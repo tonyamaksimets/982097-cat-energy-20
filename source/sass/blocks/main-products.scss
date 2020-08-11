@@ -5,9 +5,9 @@
 .main-products__item {
   padding-bottom: 25px;
 
-  border-bottom: 1px solid $special-gray-color;
+  border-bottom: 1px solid $lightest-border-color;
 
   &:first-child {
-    border-top: 1px solid $special-gray-color;
+    border-top: 1px solid $lightest-border-color;
   }
 }
