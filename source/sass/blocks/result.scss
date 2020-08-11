@@ -1,0 +1,90 @@
+.result {
+  @include layout-wrapper;
+
+  padding-top: 27px;
+  padding-bottom: 35px;
+
+  background-color: $dark-special-background-color;
+}
+
+.result__title {
+  @include title-style-reset;
+
+  padding-bottom: 33px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
+}
+
+.result__description {
+  @include paragraph-style-reset;
+
+  padding-right: 10px;
+  margin-bottom: 25px;
+}
+
+.result__table {
+  margin: 0 auto;
+  margin-bottom: 27px;
+
+  border-collapse: collapse;
+}
+
+.result__parameters {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.result__parameters-descriptions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: -10px;
+  width: 280px;
+}
+
+.result__parameter {
+  padding-top: 16px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  width: 90px;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+
+  border: 1px solid $table-border-color;
+}
+
+.result__parameter-description {
+  margin-right: 18px;
+  margin-left: 18px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 68px;
+
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+
+  background-color: $dark-special-background-color;
+}
+
+.result__cost {
+  @include paragraph-style-reset;
+
+  margin-bottom: 42px;
+
+  line-height: 20px;
+  font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
+  text-align: center;
+  text-transform: uppercase;
+}

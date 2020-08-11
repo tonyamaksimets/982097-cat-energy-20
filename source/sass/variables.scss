@@ -1,8 +1,11 @@
 $accent-color: #68b738;
 $dark-accent-color: #5eaa2f;
 
+$error-color: #ff8282;
+
 $basic-background-color: #ffffff;
 $light-special-background-color: #f2f2f2;
+$dark-special-background-color: #eaeaea;
 
 $light-text-color: #ffffff;
 $basic-text-color: #444444;
@@ -10,8 +13,21 @@ $dark-text-color: #000000;
 $special-text-color: #222222;
 $dark-special-text-color: #111111;
 
+$lightest-border-color: #ebebeb;
 $light-border-color: #e6e6e6;
 $border-color: #d9d9d9;
+$dark-border-color : #cdcdcd;
 
+$range-border-color: #cdcdcd;
+$range-background-color: #dcdcdc;
 
-$special-gray-color: #ebebeb;
+$button-no-accent-background-color: #ebebeb;
+
+$table-border-color: #cdcdcd;
+
+$form-border-color: #d9d9d9;
+$form-field-color: #e7e7e7;
+$form-field-hover-color: #cdcdcd;
+$form-field-focus-color: #444444;
+$form-checkbox-color: #cdcdcd;
+$form-checkbox-hover-color: #bababa;
