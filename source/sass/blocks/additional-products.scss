@@ -5,41 +5,14 @@
 
 .additional-products__title {
   @include title-style-reset;
+  @include caption-decoration;
 
-  position: relative;
-
-  display: flex;
-  margin-left: 22px;
   margin-bottom: 35px;
 
   font-size: 24px;
   line-height: 30px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
-
-  overflow: hidden;
-
-  &::before {
-    content: "";
-
-    position: absolute;
-    left: -70px;
-
-    display: block;
-    width: 70px;
-    height: 20px;
-
-    background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
-  }
-
-  &::after {
-    content: "";
-
-    flex-grow: 1;
-    margin-left: 22px;
-
-    background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
-  }
 }
 
 .additional-products__list {
