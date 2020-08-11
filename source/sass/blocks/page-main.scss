@@ -1,4 +1,6 @@
 .page-main__wrapper {
+  @include layout-wrapper;
+
   padding-top: 27px;
   padding-bottom: 22px;
 
@@ -14,6 +16,8 @@
 .page-main__title {
   @include title-style-reset;
 
+  @include layout-wrapper;
+
   margin-top: 27px;
   margin-bottom: 40px;
 
@@ -23,6 +27,7 @@
   color: $dark-text-color;
 
   &--wrapped {
+    @include layout-wrapper(0);
     margin-top: 0;
     margin-bottom: 22px;
 
@@ -33,8 +38,14 @@
 .page-main__slogan {
   @include paragraph-style-reset;
 
+  @include layout-wrapper;
+
   margin-bottom: 25px;
 
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
+
+  &--wrapped {
+    @include layout-wrapper(0);
+  }
 }

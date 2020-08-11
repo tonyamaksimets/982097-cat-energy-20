@@ -1,4 +1,6 @@
 .contacts__text-info {
+  @include layout-wrapper;
+
   display: flex;
   justify-content: space-between;
   padding-top: 28px;

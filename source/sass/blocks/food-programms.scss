@@ -1,5 +1,7 @@
 .food-programms__list {
   @include list-style-reset;
+
+  @include layout-wrapper;
 }
 
 .food-programms__item {

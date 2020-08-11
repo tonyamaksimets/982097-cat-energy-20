@@ -26,6 +26,8 @@
 .form__field-block {
   @include paragraph-style-reset;
 
+  @include layout-wrapper;
+
   position: relative;
 
   display: flex;
@@ -133,7 +135,7 @@
   }
 
   &--illustrated {
-    padding-right: 40px;
+    padding-right: 45px;
   }
 
   &--textarea {
@@ -184,15 +186,19 @@
 
 .form__icon {
   position: absolute;
-  right: 19px;
+  right: 39px;
 }
 
 .form__button {
+  @include layout-wrapper;
+
   margin-bottom: 21px;
 }
 
 .form__legend {
   @include paragraph-style-reset;
+
+  @include layout-wrapper;
 
   color: $dark-text-color;
   text-align: center;

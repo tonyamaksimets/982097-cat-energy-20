@@ -5,18 +5,21 @@
 
 .additional-products__title {
   @include title-style-reset;
+
   @include caption-decoration;
 
   margin-bottom: 35px;
 
   font-size: 24px;
-  line-height: 30px;
+  line-height: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
 }
 
 .additional-products__list {
   @include list-style-reset;
+
+  @include layout-wrapper;
 }
 
 .additional-products__item {
@@ -62,6 +65,10 @@
 
 .additional-product-card__price {
   float: right;
+}
+
+.additional-products__promo {
+  @include layout-wrapper;
 }
 
 .additional-products__promo-description {
