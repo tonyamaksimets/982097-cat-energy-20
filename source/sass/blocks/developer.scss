@@ -16,6 +16,10 @@
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    width: 192px;
+  }
 }
 
 .developer__name {

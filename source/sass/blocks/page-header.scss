@@ -4,6 +4,22 @@
   &--bordered {
     border-bottom: 1px solid $border-color;
   }
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+    position: relative;
+    z-index: 2;
+    min-height: $desktop-header-min-height;
+    margin-bottom: -$desktop-header-min-height;
+  }
 }
 
 .page-header__logo {
@@ -18,5 +34,9 @@
 
   &[href]:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: static;
   }
 }

@@ -57,7 +57,11 @@
   }
 }
 
-@mixin layout-wrapper($padding: 20px) {
+@mixin layout-wrapper($padding: 20px, $max-width: $desktop-width) {
+  margin-left: auto;
+  margin-right: auto;
   padding-right: $padding;
   padding-left: $padding;
+  max-width: $max-width;
+  box-sizing: border-box;
 }

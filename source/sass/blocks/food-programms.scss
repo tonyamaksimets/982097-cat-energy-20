@@ -1,6 +1,18 @@
 .food-programms__list {
   @include list-style-reset;
   @include layout-wrapper;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .food-programms__item {
@@ -10,6 +22,7 @@
   padding-right: 20px;
   padding-left: 20px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 
   background-color: $light-special-background-color;
 
@@ -53,6 +66,20 @@
 
     display: block;
     width: 67px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    margin-right: 80px;
+    width: 570px;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
   }
 }
 
