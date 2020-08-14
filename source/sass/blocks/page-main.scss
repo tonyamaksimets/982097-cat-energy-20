@@ -1,16 +1,75 @@
+.page-main {
+  &--illustrated {
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+
+      display: block;
+      height: 305px;
+      width: 100%;
+
+      background-color: $accent-color;
+      background-image: url("../img/index-background-mobile@1x.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (min-width: $tablet-width) {
+      &::before {
+        display: none;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: $desktop-header-min-height;
+
+      &::before {
+        left: 50%;
+        bottom: 0;
+
+        display: block;
+        height: 696px;
+        width: 50%;
+
+        background-color: $accent-color;
+        background-image: url("../img/index-background-desktop@1x.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
 .page-main__wrapper {
   @include layout-wrapper;
 
+  position: relative;
+
   padding-top: 27px;
-  padding-bottom: 22px;
+  margin-bottom: 22px;
 
   color: $light-text-color;
   text-align: center;
 
-  background-image: url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient($dark-accent-color 305px, $basic-background-color 305px);
-  background-position: center top;
-  background-repeat: no-repeat;
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(110px);
+
+    color: $dark-text-color;
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(190px);
+
+    min-height: 696px - $desktop-header-min-height;
+  }
 }
 
 .page-main__title {
@@ -24,6 +83,14 @@
   line-height: 36px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
 
   &--wrapped {
     @include layout-wrapper(0);
@@ -45,5 +112,11 @@
 
   &--wrapped {
     @include layout-wrapper(0);
+  }
+}
+
+.page-main__button {
+  @media (min-width: $tablet-width) {
+    width: 254px;
   }
 }

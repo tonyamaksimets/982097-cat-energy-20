@@ -28,10 +28,19 @@
     background-image: url("../img/icon-close.svg");
     background-size: 18px 18px;
   }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .main-nav__list {
   @include list-style-reset;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   clear: right;
 
@@ -58,6 +67,14 @@
 
   &:first-child {
     border-top: 1px solid $light-border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+
+    &:first-child {
+      border-top: none;
+    }
   }
 }
 

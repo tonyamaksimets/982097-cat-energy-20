@@ -1,11 +1,26 @@
 .page-footer {
+  background-color: $light-special-background-color;
+}
+
+.page-footer__wrapper {
   @include layout-wrapper;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-
   padding-top: 39px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
 }
 
 .page-footer__logo {
@@ -18,5 +33,10 @@
 
   &[href]:active {
     opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    width: 192px;
   }
 }

@@ -1,5 +1,11 @@
 .cat-food-card {
   display: flex;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+
+    flex-direction: column;
+  }
 }
 
 .cat-food-card__link {
