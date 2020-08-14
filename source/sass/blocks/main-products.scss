@@ -1,6 +1,29 @@
+.main-products {
+  @include layout-wrapper;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
+}
+
 .main-products__list {
   @include list-style-reset;
-  @include layout-wrapper;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 60px;
+    grid-row-gap: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+  }
 }
 
 .main-products__item {
@@ -10,5 +33,13 @@
 
   &:first-child {
     border-top: 1px solid $lightest-border-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    border: none;
+
+    &:first-child {
+      border: none;
+    }
   }
 }

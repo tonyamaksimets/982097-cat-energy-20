@@ -3,6 +3,10 @@
 
   &--bordered {
     border-bottom: 1px solid $border-color;
+
+    @media (min-width: $tablet-width) {
+      border: none;
+    }
   }
 
   &--illustrated {
