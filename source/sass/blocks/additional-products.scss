@@ -1,23 +1,52 @@
 .additional-products {
+  @include layout-wrapper;
+
   padding-top: 28px;
   padding-bottom: 35px;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
 }
 
 .additional-products__title {
   @include title-style-reset;
   @include caption-decoration;
 
+  margin-left: -20px;
   margin-bottom: 35px;
 
   font-size: 24px;
   line-height: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
+
+  @media (min-width: $tablet-width) {
+    @include caption-decoration(37px);
+    margin-left: 0;
+  }
+}
+
+.additional-products__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .additional-products__list {
   @include list-style-reset;
-  @include layout-wrapper;
+
+  margin-bottom: 40px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+    width: 896px;
+  }
 }
 
 .additional-products__item {
@@ -29,36 +58,24 @@
   &:first-child {
     border-top: 1px solid $dark-border-color;
   }
-}
 
-.additional-product-card__name {
-  @include title-style-reset;
-
-  margin-bottom: 13px;
-
-  font-size: 16px;
-  line-height: 16px;
-  font-family: "Oswald", "Arial", sans-serif;
-  color: $special-text-color;
-  text-transform: uppercase;
-}
-
-.additional-product-card__link {
-  @include link-style-reset;
-
-  &:hover,
-  &:focus {
-    opacity: 0.6;
+  @media (min-width: $tablet-width) {
+    border: 1px solid $dark-border-color;
   }
 
-  &:active {
-    opacity: 0.3;
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+
+    border: none;
+    border-bottom: 1px solid $dark-border-color;
   }
 }
 
-.additional-product-card__table {
-  margin-bottom: 15px;
-  width: 100%;
+.additional-products__button {
+  @media (min-width: $desktop-width) {
+    width: 244px;
+  }
 }
 
 .additional-product-card__price {
@@ -66,23 +83,15 @@
 }
 
 .additional-products__promo {
-  @include layout-wrapper;
-}
-
-.additional-products__promo-description {
   padding-top: 58px;
   padding-right: 58px;
   padding-bottom: 43px;
   padding-left: 58px;
 
-  font-size: 16px;
-  line-height: 20px;
-  color: $light-text-color;
-  text-align: center;
-
   background-color: $accent-color;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
-  background-position: center top;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   &::before {
@@ -92,5 +101,45 @@
     margin: 0 auto;
     margin-bottom: 48px;
     width: 56px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0 auto;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    width: 245px;
+    box-sizing: border-box;
+  }
+}
+
+.additional-products__promo-text {
+  @include paragraph-style-reset;
+
+  font-size: 16px;
+  line-height: 20px;
+  color: $light-text-color;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    width: 160px;
+
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+
+    text-align: center;
   }
 }
