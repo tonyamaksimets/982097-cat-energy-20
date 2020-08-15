@@ -108,10 +108,21 @@
   margin-bottom: 25px;
 
   font-family: "Oswald", "Arial", sans-serif;
+  color: $dark-text-color;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
 
   &--wrapped {
     @include layout-wrapper(0);
+
+    color: inherit;
   }
 }
 
