@@ -1,10 +1,22 @@
 .result {
+  background-color: $dark-special-background-color;
+}
+
+.result__wrapper {
   @include layout-wrapper;
 
   padding-top: 27px;
   padding-bottom: 35px;
 
-  background-color: $dark-special-background-color;
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+
+    display: flex;
+  }
 }
 
 .result__title {
@@ -30,6 +42,15 @@
   margin-bottom: 27px;
 
   border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    display: inline-table;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: table;
+    margin-left: 0;
+  }
 }
 
 .result__parameters {
@@ -77,9 +98,12 @@
   background-color: $dark-special-background-color;
 }
 
-.result__cost {
+.result__cost-block {
   @include paragraph-style-reset;
 
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
   margin-bottom: 42px;
 
   line-height: 20px;
@@ -87,4 +111,17 @@
   color: $dark-text-color;
   text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-end;
+    float: right;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    float: left;
+  }
 }

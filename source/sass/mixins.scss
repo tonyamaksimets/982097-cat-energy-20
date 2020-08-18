@@ -34,10 +34,9 @@
   margin: 0;
 }
 
-@mixin caption-decoration {
+@mixin caption-decoration($padding: 20px) {
   display: table;
-  padding: 0 20px;
-  max-width: 230px;
+  padding: 0 $padding;
 
   background-image: linear-gradient($basic-background-color, $basic-background-color);
 

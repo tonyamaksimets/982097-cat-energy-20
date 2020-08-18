@@ -1,6 +1,23 @@
 .form {
   padding-top: 15px;
   padding-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 40px;
+    padding-right: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .form__fieldset {
@@ -20,12 +37,21 @@
 
     border-top: 1px solid $form-border-color;
     border-bottom: 1px solid $form-border-color;
+
+    @media (min-width: $tablet-width) {
+      border: 1px solid $form-field-color;
+    }
+  }
+
+  &--wrapped {
+    @media (min-width: $desktop-width) {
+      width: 570px;
+    }
   }
 }
 
 .form__field-block {
   @include paragraph-style-reset;
-  @include layout-wrapper;
 
   position: relative;
 
@@ -37,9 +63,27 @@
     margin-bottom: 0;
   }
 
-  &--radio,
+  &--radio {
+    display: block;
+  }
+
   &--checkbox {
     display: block;
+
+    @media (min-width: $tablet-width) {
+      width: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 25%;
+    }
+  }
+
+  &--wrapped {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+      width: 570px;
+    }
   }
 }
 
@@ -170,17 +214,33 @@
 
 .form__list {
   @include list-style-reset;
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 .form__fieldset-legend {
   @include caption-decoration;
 
+  margin-left: -20px;
   margin-bottom: 34px;
+  max-width: 230px;
 
   font-size: 24px;
   line-height: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
+
+  @media (min-width: $tablet-width) {
+    @include caption-decoration(40px);
+
+    margin-left: -40px;
+    max-width: none;
+  }
 }
 
 .form__icon {
@@ -189,15 +249,26 @@
 }
 
 .form__button {
-  @include layout-wrapper;
-
   margin-bottom: 21px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    width: 282px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 568px;
+  }
 }
 
 .form__legend {
   @include paragraph-style-reset;
-  @include layout-wrapper;
 
   color: $dark-text-color;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+  }
 }

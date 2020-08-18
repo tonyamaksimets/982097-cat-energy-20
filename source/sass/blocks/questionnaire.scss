@@ -1,0 +1,11 @@
+.questionnaire {
+  @include layout-wrapper;
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
+}
