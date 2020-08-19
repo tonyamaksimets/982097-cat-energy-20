@@ -52,11 +52,11 @@
 
   position: relative;
 
-  padding-top: 27px;
   margin-bottom: 22px;
+  padding-top: 27px;
 
-  color: $light-text-color;
   text-align: center;
+  color: $light-text-color;
 
   @media (min-width: $tablet-width) {
     @include layout-wrapper(110px);
@@ -68,6 +68,9 @@
   @media (min-width: $desktop-width) {
     @include layout-wrapper(190px);
 
+    margin-bottom: 82px;
+    padding-top: 115px;
+    padding-right: 700px;
     min-height: 696px - $desktop-header-min-height;
   }
 }
@@ -84,20 +87,28 @@
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
 
+  &--wrapped {
+    @include layout-wrapper(0);
+
+    margin-top: 0;
+    margin-bottom: 23px;
+
+    color: inherit;
+  }
+
   @media (min-width: $tablet-width) {
     @include layout-wrapper(30px);
+
+    font-size: 60px;
+    line-height: 60px;
+
+    &--wrapped {
+      margin-bottom: 40px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include layout-wrapper(110px);
-  }
-
-  &--wrapped {
-    @include layout-wrapper(0);
-    margin-top: 0;
-    margin-bottom: 22px;
-
-    color: inherit;
   }
 }
 
@@ -108,26 +119,32 @@
   margin-bottom: 25px;
 
   font-family: "Oswald", "Arial", sans-serif;
-  color: $dark-text-color;
   text-transform: uppercase;
-
-  @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-  }
-
-  @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
-  }
+  color: $dark-text-color;
 
   &--wrapped {
     @include layout-wrapper(0);
 
     color: inherit;
   }
+
+  @media (min-width: $tablet-width) {
+    @include layout-wrapper(30px);
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include layout-wrapper(110px);
+  }
 }
 
 .page-main__button {
   @media (min-width: $tablet-width) {
-    width: 254px;
+    width: 244px;
+
+    font-size: 20px;
+    line-height: 20px;
   }
 }

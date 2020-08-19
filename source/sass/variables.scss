@@ -20,6 +20,10 @@ $light-border-color: #e6e6e6;
 $border-color: #d9d9d9;
 $dark-border-color : #cdcdcd;
 
+$desktop-menu-border-color: #ffffff;
+
+$show-more-border-color: #f2f2f2;
+
 $range-border-color: #cdcdcd;
 $range-background-color: #dcdcdc;
 
@@ -37,8 +41,9 @@ $form-checkbox-hover-color: #bababa;
 
 //Breakpoints-widths
 
+$mobile-only-width: 767px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
 
 //Special
-$desktop-header-min-height: 140px;
+$desktop-header-min-height: 112px;

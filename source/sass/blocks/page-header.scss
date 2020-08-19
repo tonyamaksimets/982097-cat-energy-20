@@ -3,19 +3,6 @@
 
   &--bordered {
     border-bottom: 1px solid $border-color;
-
-    @media (min-width: $tablet-width) {
-      border: none;
-    }
-  }
-
-  &--illustrated {
-    @media (min-width: $desktop-width) {
-      position: relative;
-      z-index: 2;
-      min-height: $desktop-header-min-height;
-      margin-bottom: -$desktop-header-min-height;
-    }
   }
 
   @media (min-width: $tablet-width) {
@@ -23,16 +10,33 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 24px;
     width: 100%;
+
+    &--bordered {
+      border: none;
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include layout-wrapper(110px);
+
+    padding-top: 52px;
+
+    &--illustrated {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: -$desktop-header-min-height;
+      min-height: $desktop-header-min-height;
+    }
   }
 }
 
 .page-header__logo {
   position: absolute;
+  z-index: 1;
   top: 12px;
   left: 20px;
 
