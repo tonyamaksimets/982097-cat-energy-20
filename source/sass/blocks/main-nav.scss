@@ -123,7 +123,10 @@
   @media (min-width: $desktop-width) {
     font-size: 20px;
     line-height: 30px;
-    color: $light-text-color;
+
+    .page-header--illustrated & {
+      color: $light-text-color;
+    }
   }
 }
 
@@ -153,7 +156,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    &--active {
+    .page-header--illustrated &--active {
       border-color: $desktop-menu-border-color;
     }
   }
