@@ -38,7 +38,6 @@
     left: 22px;
 
     display: block;
-
     width: 50px;
     height: 50px;
 
@@ -70,14 +69,79 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 30px;
+    padding-top: 77px;
+    padding-right: 275px;
+    padding-bottom: 35px;
+    padding-left: 52px;
+
+    &:nth-child(2) {
+      padding-right: 315px;
+    }
+
+    &::before {
+      top: 91px;
+      right: 60px;
+      left: auto;
+
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 81px;
+      right: 92px;
+      left: auto;
+
+      width: 140px;
+      height: 192px;
+    }
+
+    &--pro::after {
+      top: 135px;
+      right: 28px;
+      left: auto;
+
+      width: 268px;
+      height: 112px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    padding-right: 52px;
+    padding-bottom: 82px;
     width: 570px;
 
     &:nth-child(2n) {
       margin-right: 0;
+      padding-right: 52px;
+    }
+
+    &::before {
+      top: 47px;
+      right: auto;
+      left: 52px;
+
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      top: 41px;
+      right: auto;
+      left: 67px;
+
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      top: 67px;
+      right: auto;
+      left: 33px;
+
+      width: 134px;
+      height: 56px;
     }
   }
 }
@@ -85,14 +149,27 @@
 .food-programms__name {
   @include title-style-reset;
 
-  margin-left: 71px;
   margin-bottom: 29px;
+  margin-left: 71px;
 
   font-size: 24px;
   line-height: 37px;
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $dark-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-bottom: 26px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 75px;
+    padding-left: 161px;
+  }
 }
 
 .food-programms__description {
@@ -101,6 +178,17 @@
   padding-bottom: 23px;
 
   border-bottom: 1px solid $border-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+    padding-bottom: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+    color: $dark-text-color;
+
+    border: none;
+  }
 }
 
 .food-programms__link {
@@ -128,14 +216,32 @@
     position: absolute;
     top: 18px;
 
-    width: 24px;
     margin-left: 15px;
+    width: 24px;
   }
 
   &:hover::after,
-  &:active::after {
+  &:focus::after {
     content: url("../img/icon-right-arrow-verylong.svg");
 
     width: 32px;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 16px;
+
+      margin-left: 25px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 35px;
   }
 }

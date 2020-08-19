@@ -6,15 +6,24 @@
 
   @media (min-width: $tablet-width) {
     @include layout-wrapper(30px);
+
+    padding-top: 45px;
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid $light-border-color;
   }
 
   @media (min-width: $desktop-width) {
     @include layout-wrapper(110px);
+
+    padding-top: 72px;
+
+    border: none;
   }
 }
 
 .food-info__tagline {
-  @include title-style-reset;
+  @include paragraph-style-reset;
 
   margin-bottom: 38px;
 
@@ -22,10 +31,19 @@
   line-height: 40px;
   font-family: "Oswald", "Arial", sans-serif;
   color: $dark-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 32px;
+
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .food-info__list {
   @include list-style-reset;
+
+  counter-reset: info-itens;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -40,10 +58,12 @@
 .food-info__item {
   position: relative;
 
-  min-height: 60px;
-  padding-left: 80px;
   margin-bottom: 20px;
+  padding-left: 80px;
+  min-height: 60px;
   box-sizing: border-box;
+
+  counter-increment: info-items;
 
   &:last-child {
     margin-bottom: 0;
@@ -65,6 +85,66 @@
     background-repeat: no-repeat;
   }
 
+  @media (min-width: $tablet-width) {
+    margin-bottom: 37px;
+    padding-top: 40px;
+    padding-right: 70px;
+    padding-left: 0;
+    padding-bottom: 57px;
+    width: 50%;
+    min-height: 280px;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    &:nth-child(2n) {
+      padding-left: 30px;
+    }
+
+    &:last-child {
+      margin-bottom: 37px;
+    }
+
+    &::before {
+      position: static;
+
+      margin-bottom: 31px;
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      content: counter(info-items);
+
+      position: absolute;
+      top: 0;
+      left: 113px;
+      z-index: -1;
+
+      font-size: 280px;
+      line-height: 280px;
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $light-special-background-color;
+    }
+
+    &:nth-child(2n)::after {
+      left: 143px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    width: 250px;
+
+    &:nth-child(2n) {
+      padding-left: 0;
+    }
+
+    &:nth-child(2n)::after {
+      left: 113px;
+    }
+  }
+
   &--healthy::before {
     background-image: url("../img/advantage-leaf@1x.png");
   }
@@ -79,13 +159,5 @@
 
   &--effective::before {
     background-image: url("../img/advantage-clock@1x.png");
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 50%;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 245px;
   }
 }

@@ -1,8 +1,22 @@
+.main-nav {
+  @media (max-width: $mobile-only-width) {
+    position: relative;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 470px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 50%;
+  }
+}
+
 .main-nav__toggle {
   @include button-style-reset;
 
   display: block;
-  float: right;
+  margin-left: auto;
 
   width: 66px;
   height: 66px;
@@ -29,6 +43,12 @@
     background-size: 18px 18px;
   }
 
+  @media (max-width: $mobile-only-width) {
+    .main-nav--nojs & {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: none;
   }
@@ -37,15 +57,29 @@
 .main-nav__list {
   @include list-style-reset;
 
+  @media (max-width: $mobile-only-width) {
+    position: absolute;
+    z-index: 4;
+
+    width: 100%;
+
+    background-color: $basic-background-color;
+
+    .main-nav--nojs & {
+      position: static;
+
+      margin-top: 66px;
+    }
+
+    &--closed {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
-  }
-
-  clear: right;
-
-  &--closed {
-    display: none;
+    justify-content: flex-end;
   }
 }
 
@@ -70,11 +104,26 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-left: 35px;
+    padding: 0;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+
     border: none;
 
     &:first-child {
+      margin-left: 0;
+
       border-top: none;
     }
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $light-text-color;
   }
 }
 
@@ -92,5 +141,20 @@
 
   &--active {
     border-bottom: 2px solid $accent-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    padding-bottom: 9px;
+
+    &--active {
+      padding-bottom: 7px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--active {
+      border-color: $desktop-menu-border-color;
+    }
   }
 }

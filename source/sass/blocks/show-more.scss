@@ -8,25 +8,55 @@
 
     display: block;
     margin: 0 auto;
-    margin-bottom: 23px;
-    height: 30px;
+    margin-bottom: 24px;
     width: 30px;
+    height: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 49px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 52px;
   }
 }
 
 .show-more__description {
+  @include paragraph-style-reset;
+
   margin-bottom: 8px;
 
   font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
-  color: $dark-special-text-color;
   text-transform: uppercase;
+  color: $dark-special-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    margin-bottom: 25px;
+    width: 170px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
 }
 
 .show-more__slogan {
+  @include paragraph-style-reset;
+
   margin-bottom: 21px;
 
   font-size: 12px;
   line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 auto;
+    width: 170px;
+
+    font-size: 16px;
+  }
 }

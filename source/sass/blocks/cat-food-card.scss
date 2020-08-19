@@ -1,10 +1,11 @@
 .cat-food-card {
   display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-
     flex-direction: column;
+
+    text-align: center;
   }
 }
 
@@ -23,24 +24,44 @@
 
 .cat-food-card__image {
   vertical-align: bottom;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    top: -10px;
+
+    margin-bottom: -10px;
+  }
 }
 
 .cat-food-card__wrapper {
   width: 140px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .cat-food-card__name {
   @include title-style-reset;
 
-  margin-top: 20px;
+  margin-top: 22px;
   margin-bottom: 13px;
   width: 80px;
 
   font-size: 16px;
   line-height: 20px;
   font-family: "Oswald", "Arial", sans-serif;
-  color: $special-text-color;
   text-transform: uppercase;
+  color: $special-text-color;
+
+  @media (min-width: $tablet-width) {
+    margin-right: auto;
+    margin-left: auto;
+    width: 160px;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .cat-food-card__table {
@@ -50,14 +71,36 @@
   line-height: 16px;
 
   border-collapse: collapse;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+.cat-food-card__property {
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $dark-border-color;
+  }
 }
 
 .cat-food-card__property-name {
   padding: 0;
+
+  text-align: left;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 6px;
+    padding-bottom: 9px;
+  }
 }
 
 .cat-food-card__property-value {
   padding: 0;
 
-  float: right;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 6px;
+    padding-bottom: 9px;
+  }
 }

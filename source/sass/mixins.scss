@@ -38,7 +38,7 @@
   display: table;
   padding: 0 $padding;
 
-  background-image: linear-gradient($basic-background-color, $basic-background-color);
+  background-color: $basic-background-color;
 
   &::before {
     content: "";
@@ -57,8 +57,8 @@
 }
 
 @mixin layout-wrapper($padding: 20px, $max-width: $desktop-width) {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
   padding-right: $padding;
   padding-left: $padding;
   max-width: $max-width;

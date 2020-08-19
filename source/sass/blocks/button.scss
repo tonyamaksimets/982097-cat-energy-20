@@ -9,11 +9,9 @@
   padding-left: 15px;
   box-sizing: border-box;
 
-  font-size: 14px;
-  line-height: 18px;
+  font-family: "Oswald", "Arial", sans-serif;
   text-align: center;
   text-transform: uppercase;
-  font-family: "Oswald", "Arial", sans-serif;
   color: $light-text-color;
 
   background-color: $accent-color;
@@ -42,6 +40,13 @@
 
     &:active {
       color: rgba($basic-text-color, 0.3);
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &--growing {
+      padding-top: 16px;
+      padding-bottom: 16px;
     }
   }
 }
