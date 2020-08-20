@@ -103,12 +103,18 @@
     line-height: 60px;
 
     &--wrapped {
+      @include layout-wrapper(0);
+
       margin-bottom: 40px;
     }
   }
 
   @media (min-width: $desktop-width) {
     @include layout-wrapper(110px);
+
+    &--wrapped {
+      @include layout-wrapper(0);
+    }
   }
 }
 
@@ -133,10 +139,18 @@
 
     font-size: 20px;
     line-height: 20px;
+
+    &--wrapped {
+      @include layout-wrapper(0);
+    }
   }
 
   @media (min-width: $desktop-width) {
     @include layout-wrapper(110px);
+
+    &--wrapped {
+      @include layout-wrapper(0);
+    }
   }
 }
 
