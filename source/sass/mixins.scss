@@ -54,6 +54,14 @@
 
     background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
   }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      height: 24px;
+
+      background-image: linear-gradient($basic-background-color 22px, $accent-color 22px, $accent-color 24px, $basic-background-color 24px);
+    }
+  }
 }
 
 @mixin layout-wrapper($padding: 20px, $max-width: $desktop-width) {

@@ -6,10 +6,16 @@
 
   @media (min-width: $tablet-width) {
     @include layout-wrapper(30px);
+
+    padding-top: 68px;
+    padding-bottom: 76px;
   }
 
   @media (min-width: $desktop-width) {
     @include layout-wrapper(110px);
+
+    padding-top: 75px;
+    padding-bottom: 84px;
   }
 }
 
@@ -27,7 +33,16 @@
 
   @media (min-width: $tablet-width) {
     @include caption-decoration(37px);
+
     margin-left: 0;
+    margin-bottom: 80px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: -37px;
   }
 }
 
@@ -42,6 +57,10 @@
   @include list-style-reset;
 
   margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 72px;
+  }
 
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
@@ -60,12 +79,27 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-right: 37px;
+    padding-bottom: 25px;
+    padding-left: 37px;
+
     border: 1px solid $dark-border-color;
+    border-bottom: none;
+
+    &:last-child {
+      border-bottom: 1px solid $dark-border-color;
+    }
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-right: 0;
+    padding-bottom: 16px;
+    padding-left: 0;
 
     border: none;
     border-bottom: 1px solid $dark-border-color;
@@ -73,7 +107,16 @@
 }
 
 .additional-products__button {
+  margin-top: 15px;
+
+  font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 24px;
+  }
+
   @media (min-width: $desktop-width) {
+    margin-top: 0;
     width: 244px;
   }
 }
@@ -101,25 +144,33 @@
     margin: 0 auto;
     margin-bottom: 48px;
     width: 56px;
-
-    @media (min-width: $tablet-width) {
-      margin: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin: 0 auto;
-    }
   }
 
   @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-top: 64px;
+    padding-right: 113px;
+    padding-bottom: 66px;
+    padding-left: 88px;
+
+    &::before {
+      margin: 0;
+    }
   }
 
   @media (min-width: $desktop-width) {
     display: block;
+    padding-right: 30px;
+    padding-bottom: 42px;
+    padding-left: 30px;
     width: 245px;
     box-sizing: border-box;
+
+    &::before {
+      margin: 0 auto;
+      margin-bottom: 58px;
+    }
   }
 }
 
@@ -132,7 +183,8 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    width: 160px;
+    margin-top: 8px;
+    width: 170px;
 
     text-align: left;
   }
