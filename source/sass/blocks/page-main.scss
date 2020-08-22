@@ -134,14 +134,27 @@
     color: inherit;
   }
 
+  &--questionnaire {
+    margin-top: 55px;
+    margin-left: 0;
+    width: 270px;
+  }
+
   @media (min-width: $tablet-width) {
     @include layout-wrapper(30px);
 
     font-size: 20px;
-    line-height: 20px;
+    line-height: 30px;
 
     &--wrapped {
       @include layout-wrapper(0);
+    }
+
+    &--questionnaire {
+      @include layout-wrapper(70px);
+
+      margin-left: 0;
+      width: 470px;
     }
   }
 
@@ -150,6 +163,13 @@
 
     &--wrapped {
       @include layout-wrapper(0);
+    }
+
+    &--questionnaire {
+      @include layout-wrapper(110px);
+      margin-left: auto;
+      padding-right: 1000px;
+      width: auto;
     }
   }
 }

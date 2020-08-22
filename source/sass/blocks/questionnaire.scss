@@ -2,7 +2,7 @@
   @include layout-wrapper;
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
+    @include layout-wrapper(70px);
   }
 
   @media (min-width: $desktop-width) {
