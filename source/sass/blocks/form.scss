@@ -214,6 +214,12 @@
   padding-left: 12px;
   flex-grow: 1;
 
+  font-size: 16px;
+  line-height: 16px;
+  font-family: "Oswald", "Arial", sans-serif;
+  text-transform: uppercase;
+  color: $basic-text-color;
+
   border: 1px solid $form-field-color;
 
   &:hover {
@@ -237,14 +243,6 @@
     fill: $error-color;
   }
 
-  &::placeholder {
-    font-size: 16px;
-    line-height: 16px;
-    font-family: "Oswald", "Arial", sans-serif;
-    text-transform: uppercase;
-    color: $basic-text-color;
-  }
-
   &--illustrated {
     padding-right: 45px;
   }
@@ -254,15 +252,13 @@
   }
 
   @media (min-width: $tablet-width) {
-    padding-top: 22px;
+    padding-top: 18px;
     padding-right: 20px;
-    padding-bottom: 14px;
+    padding-bottom: 18px;
     padding-left: 20px;
 
-    &::placeholder {
-      font-size: 20px;
-      line-height: 20px;
-    }
+    font-size: 20px;
+    line-height: 20px;
 
     &--textarea {
       padding-top: 13px;
