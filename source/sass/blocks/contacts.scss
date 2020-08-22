@@ -3,7 +3,7 @@
 }
 
 .contacts__text-info {
-  @include layout-wrapper;
+  @include layout-wrapper(20px, 70px, 110px);
 
   display: flex;
   justify-content: space-between;
@@ -15,15 +15,11 @@
   }
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(70px);
-
     padding-top: 66px;
     padding-bottom: 58px;
   }
 
   @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
-
     justify-content: flex-start;
     align-items: flex-start;
     margin-bottom: -400px;

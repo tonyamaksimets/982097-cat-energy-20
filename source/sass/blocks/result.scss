@@ -12,21 +12,15 @@
 }
 
 .result__wrapper {
-  @include layout-wrapper;
-
   padding-top: 27px;
   padding-bottom: 37px;
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-
     padding-top: 43px;
     padding-bottom: 68px;
   }
 
   @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
-
     display: flex;
     justify-content: space-between;
     padding-top: 59px;

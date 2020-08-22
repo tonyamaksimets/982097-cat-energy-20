@@ -5,20 +5,12 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 100%;
 
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
 
   @media (min-width: $tablet-width) {
-    width: auto;
-    max-width: 320px;
-
     border: none;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 730px;
   }
 }
 

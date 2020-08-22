@@ -1,19 +1,13 @@
 .additional-products {
-  @include layout-wrapper;
-
   padding-top: 28px;
   padding-bottom: 35px;
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-
     padding-top: 68px;
     padding-bottom: 76px;
   }
 
   @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
-
     padding-top: 75px;
     padding-bottom: 84px;
   }
@@ -179,8 +173,8 @@
 
   font-size: 16px;
   line-height: 20px;
-  color: $light-text-color;
   text-align: center;
+  color: $light-text-color;
 
   @media (min-width: $tablet-width) {
     margin-top: 8px;

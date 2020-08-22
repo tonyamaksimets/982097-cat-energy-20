@@ -2,14 +2,6 @@
   @media (max-width: $mobile-only-width) {
     position: relative;
   }
-
-  @media (min-width: $tablet-width) {
-    max-width: 470px;
-  }
-
-  @media (min-width: $desktop-width) {
-    max-width: 50%;
-  }
 }
 
 .main-nav__toggle {
@@ -17,7 +9,6 @@
 
   display: block;
   margin-left: auto;
-
   width: 66px;
   height: 66px;
 

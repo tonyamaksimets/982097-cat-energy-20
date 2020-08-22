@@ -1,14 +1,7 @@
 .food-programms__list {
   @include list-style-reset;
-  @include layout-wrapper;
-
-  @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-  }
 
   @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
-
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -18,10 +11,10 @@
 .food-programms__item {
   position: relative;
 
+  margin-bottom: 20px;
   padding-top: 30px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-bottom: 20px;
   box-sizing: border-box;
 
   background-color: $light-special-background-color;
@@ -41,8 +34,8 @@
     width: 50px;
     height: 50px;
 
-    border-radius: 50%;
     background-color: $accent-color;
+    border-radius: 50%;
   }
 
   &--slim::after {
