@@ -54,13 +54,31 @@
 
     background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
   }
+
+  @media (min-width: $tablet-width) {
+    &::before {
+      height: 24px;
+
+      background-image: linear-gradient($basic-background-color 22px, $accent-color 22px, $accent-color 24px, $basic-background-color 24px);
+    }
+  }
 }
 
-@mixin layout-wrapper($padding: 20px, $max-width: $desktop-width) {
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $padding;
-  padding-left: $padding;
-  max-width: $max-width;
+@mixin layout-wrapper($padding-mobile: 20px, $padding-tablet: 30px, $padding-desktop: 110px, $max-width: $desktop-width) {
+  padding-right: $padding-mobile;
+  padding-left: $padding-mobile;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    padding-right: $padding-tablet;
+    padding-left: $padding-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $padding-desktop;
+    padding-left: $padding-desktop;
+    max-width: $max-width;
+  }
 }

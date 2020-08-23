@@ -1,21 +1,15 @@
 .food-info {
-  @include layout-wrapper;
-
   padding-top: 27px;
-  padding-bottom: 42px;
+  padding-bottom: 32px;
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-
     padding-top: 45px;
-    padding-bottom: 10px;
+    padding-bottom: 47px;
 
     border-bottom: 1px solid $light-border-color;
   }
 
   @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
-
     padding-top: 72px;
 
     border: none;
@@ -88,7 +82,7 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 37px;
     padding-top: 40px;
-    padding-right: 70px;
+    padding-right: 90px;
     padding-left: 0;
     padding-bottom: 57px;
     width: 50%;
@@ -101,8 +95,13 @@
       padding-left: 30px;
     }
 
-    &:last-child {
-      margin-bottom: 37px;
+    &:nth-child(4) {
+      padding-right: 70px;
+    }
+
+    &:nth-last-child(1),
+    &:nth-last-child(2) {
+      margin-bottom: 0;
     }
 
     &::before {
@@ -133,10 +132,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-bottom: 0;
     padding-right: 0;
     width: 250px;
 
     &:nth-child(2n) {
+      margin-bottom: 0;
       padding-left: 0;
     }
 

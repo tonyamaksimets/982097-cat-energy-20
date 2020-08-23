@@ -11,14 +11,9 @@
   padding-top: 39px;
 
   @media (min-width: $tablet-width) {
-    @include layout-wrapper(30px);
-
     flex-direction: row;
     justify-content: space-between;
-  }
-
-  @media (min-width: $desktop-width) {
-    @include layout-wrapper(110px);
+    padding-bottom: 30px;
   }
 }
 
@@ -37,5 +32,27 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
     width: 192px;
+  }
+}
+
+.page-footer__social {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    max-width: 320px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 730px;
+  }
+}
+
+.page-footer__developer {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 30px;
+    width: 162px;
   }
 }

@@ -6,7 +6,6 @@
   align-items: center;
   padding-top: 20px;
   padding-bottom: 22px;
-  width: 100%;
 
   &:hover .developer__logo,
   &:focus .developer__logo {
@@ -15,10 +14,6 @@
 
   &:active {
     opacity: 0.3;
-  }
-
-  @media (min-width: $tablet-width) {
-    width: 192px;
   }
 }
 
