@@ -6,7 +6,7 @@
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 60px;
     grid-row-gap: 140px;
-    padding-top: 81px;
+    padding-top: 110px;
   }
 
   @media (min-width: $desktop-width) {
@@ -32,9 +32,9 @@
   @media (min-width: $tablet-width) {
     position: relative;
 
-    padding-right: 38px;
+    padding-right: 0;
     padding-bottom: 112px;
-    padding-left: 38px;
+    padding-left: 0;
 
     background-color: $light-special-background-color;
     border: none;
@@ -56,6 +56,7 @@
   @media (min-width: $tablet-width) {
     position: absolute;
     bottom: 40px;
+    left: 38px;
 
     width: calc(100% - 38px * 2);
   }

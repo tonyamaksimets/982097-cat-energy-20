@@ -11,7 +11,7 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding-top: 24px;
+    padding-top: 14px;
     width: 100%;
 
     &--bordered {
@@ -52,12 +52,25 @@
   }
 }
 
+.page-header__logo img {
+  @media (min-width: $tablet-width) {
+    width: 173px;
+    height: 58px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 60px;
+  }
+}
+
 .page-header__main-nav {
   @media (min-width: $tablet-width) {
     max-width: 470px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 6px;
     max-width: 50%;
   }
 }
