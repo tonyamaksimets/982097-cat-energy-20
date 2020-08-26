@@ -1,6 +1,6 @@
 .food-info {
   padding-top: 27px;
-  padding-bottom: 32px;
+  padding-bottom: 39px;
 
   @media (min-width: $tablet-width) {
     padding-top: 45px;
@@ -13,6 +13,12 @@
     padding-top: 72px;
 
     border: none;
+  }
+
+  br {
+    @media (max-width: $mobile-only-width) {
+      display: none;
+    }
   }
 }
 
