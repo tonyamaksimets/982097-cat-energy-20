@@ -52,12 +52,26 @@
   }
 }
 
+.page-header__logo img {
+  @media (min-width: $tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 202px;
+    height: 60px;
+  }
+}
+
 .page-header__main-nav {
   @media (min-width: $tablet-width) {
+    padding-bottom: 6px;
     max-width: 470px;
   }
 
   @media (min-width: $desktop-width) {
+    padding-bottom: 8px;
     max-width: 50%;
   }
 }

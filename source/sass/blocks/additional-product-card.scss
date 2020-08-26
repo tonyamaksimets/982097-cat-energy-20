@@ -12,7 +12,7 @@
 .additional-product-card__name {
   @include title-style-reset;
 
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 
   font-size: 16px;
   line-height: 16px;
@@ -59,7 +59,7 @@
   width: 50%;
 
   @media (min-width: $tablet-width) {
-    width: 198px;
+    width: 195px;
 
     text-align: right;
   }
@@ -75,6 +75,6 @@
   text-align: right;
 
   @media (min-width: $tablet-width) {
-    width: 87px;
+    width: 90px;
   }
 }

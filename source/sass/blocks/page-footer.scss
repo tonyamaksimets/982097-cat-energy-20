@@ -13,7 +13,12 @@
   @media (min-width: $tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 34px;
     padding-bottom: 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 34px;
   }
 }
 

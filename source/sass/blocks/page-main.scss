@@ -19,6 +19,10 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-mobile@2x.jpg");
+      }
     }
 
     @media (min-width: $tablet-width) {
@@ -42,16 +46,17 @@
         background-image: url("../img/index-background-desktop@1x.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+
+        @media (min-resolution: 2dppx) {
+          background-image: url("../img/index-background-desktop@2x.jpg");
+        }
       }
     }
   }
 }
 
 .page-main__wrapper {
-  @include layout-wrapper(20px, 110px, 190px);
-
-  position: relative;
-
+  @include layout-wrapper(20px, 116px, 190px);
   margin-bottom: 22px;
   padding-top: 27px;
 
@@ -59,14 +64,21 @@
   color: $light-text-color;
 
   @media (min-width: $tablet-width) {
+    position: relative;
+
+    margin-bottom: 0;
+    padding-top: 62px;
+    padding-bottom: 526px;
+
     color: $dark-text-color;
     text-align: left;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 82px;
-    padding-top: 115px;
+    margin-bottom: 80px;
+    padding-top: 108px;
     padding-right: 700px;
+    padding-bottom: 0;
     min-height: 696px - $desktop-header-min-height;
   }
 }
@@ -93,6 +105,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-top: 62px;
     margin-bottom: 55px;
 
     font-size: 60px;
@@ -101,13 +114,18 @@
     &--wrapped {
       @include layout-wrapper(0, 0, 0);
 
-      margin-bottom: 40px;
+      margin-top: 0;
+      margin-bottom: 35px;
     }
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 72px;
+
     &--wrapped {
       @include layout-wrapper(0, 0, 0);
+
+      margin-top: 0;
     }
   }
 }
@@ -133,6 +151,7 @@
   }
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 44px;
     margin-left: 0;
     width: 470px;
 
@@ -157,6 +176,26 @@
   }
 }
 
+.page-main__image {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    bottom: 0;
+    left: 29px;
+    z-index: -1;
+
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 27px;
+    left: 558px;
+
+    width: 552px;
+    height: 499px;
+  }
+}
+
 .page-main__button {
   @media (min-width: $tablet-width) {
     width: 244px;
@@ -170,7 +209,7 @@
   @include layout-wrapper;
 
   &--mobile-special {
-    @include layout-wrapper(0, 70px, 110px);
+    @include layout-wrapper(0, 30px, 110px);
   }
 
   &--tablet-special {
