@@ -12,14 +12,18 @@
   width: 320px;
 
   @media (min-width: $tablet-width) {
-    width: 690px;
-    margin: 0;
-    margin-left: auto;
+    // position: relative;
+    // left: 10px;
+
+    width: 708px;
     margin-bottom: 11px;
   }
 
   @media (min-width: $desktop-width) {
+    position: static;
+
     margin-bottom: 0;
+    width: 730px;
   }
 }
 
@@ -27,6 +31,7 @@
   background-color: $dark-special-background-color;
 
   overflow: hidden;
+  box-sizing: border-box;
 
   &--before {
     position: relative;
@@ -42,19 +47,25 @@
   }
 
   @media (min-width: $tablet-width) {
-    background-image: linear-gradient($basic-background-color 169px, $dark-special-background-color 169px);
+    background-image: linear-gradient($basic-background-color 168px, $dark-special-background-color 168px);
+
+    &--before {
+      padding-left: 18px;
+    }
   }
 
   @media (min-width: $desktop-width) {
     padding-bottom: 132px;
 
     &--before {
-      width: 365px;
+      padding-left: 0;
 
       background-image: linear-gradient($basic-background-color 191px, $light-special-background-color 191px);
     }
 
     &--after {
+      right: 40px;
+
       background-image: linear-gradient($basic-background-color 191px, $dark-special-background-color 191px);
     }
   }

@@ -50,9 +50,9 @@
 
     display: block;
     width: 100%;
-    height: 20px;
+    height: 18px;
 
-    background-image: linear-gradient($basic-background-color 18px, $accent-color 18px, $accent-color 20px, $basic-background-color 20px);
+    background-image: linear-gradient($basic-background-color 16px, $accent-color 16px, $accent-color 18px, $basic-background-color 18px);
   }
 
   @media (min-width: $tablet-width) {
