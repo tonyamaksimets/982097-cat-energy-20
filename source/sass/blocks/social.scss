@@ -4,7 +4,6 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
 
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
@@ -16,18 +15,44 @@
 
 .social__link {
   display: block;
-  padding: 21px;
+  padding-top: 23px;
+  width: 55px;
+  height: 38px;
 
-  &:hover .social__image,
-  &:focus .social__image {
-    fill: $accent-color;
+  text-align: center;
+  color: $footer-link-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
   }
 
   &:active {
     opacity: 0.3;
   }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    width: 50px;
+    height: 30px;
+  }
 }
 
 .social__image {
-  display: block;
+  @media (min-width: $tablet-width) {
+    &--vk {
+      width: 30px;
+      height: 25px;
+    }
+
+    &--instagram {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 20px;
+      height: 27px;
+    }
+  }
 }

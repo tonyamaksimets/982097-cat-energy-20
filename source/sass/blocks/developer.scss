@@ -7,17 +7,26 @@
   padding-top: 20px;
   padding-bottom: 22px;
 
-  &:hover .developer__logo,
-  &:focus .developer__logo {
-    fill: $accent-color;
-  }
-
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
   }
 }
 
 .developer__name {
   font-size: 16px;
   line-height: 18px;
+}
+
+.developer__logo {
+  color: $footer-link-color;
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
