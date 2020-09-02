@@ -234,7 +234,7 @@
   }
 
   &:focus + .form__icon {
-    fill: $accent-color;
+    color: $accent-color;
   }
 
   &:invalid {
@@ -242,7 +242,7 @@
   }
 
   &:invalid + .form__icon {
-    fill: $error-color;
+    color: $error-color;
   }
 
   &--illustrated {
@@ -354,7 +354,7 @@
   position: absolute;
   right: 17px;
 
-  fill: $special-text-color;
+  color: $special-text-color;
 }
 
 .form__button {
