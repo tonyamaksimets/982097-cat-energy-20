@@ -31,6 +31,7 @@ const styles = () => {
 
 exports.styles = styles;
 
+
 // Images
 
 const images = () => {
@@ -44,13 +45,15 @@ const images = () => {
 
 exports.images = images;
 
-const webpimg = () => {
+
+const webpImg = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
 
-exports.webpimg = webpimg;
+exports.webpImg = webpImg;
+
 
 // Sprite
 
@@ -62,6 +65,14 @@ const sprite = () => {
 }
 
 exports.sprite = sprite;
+
+
+const cleanSpriteImg = () => {
+  return del("build/img/**/s-icon-*.svg");
+}
+
+exports.cleanSpriteImg = cleanSpriteImg;
+
 
 //Copy
 
@@ -78,6 +89,7 @@ const copy = () => {
 
 exports.copy = copy;
 
+
 //Clean
 
 const clean = () => {
@@ -85,6 +97,7 @@ const clean = () => {
 }
 
 exports.clean = clean;
+
 
 //Html
 
@@ -99,6 +112,7 @@ const html = () => {
 
 exports.html = html;
 
+
 //Build
 
 const build = gulp.series (
@@ -106,12 +120,14 @@ const build = gulp.series (
   copy,
   styles,
   images,
-  webpimg,
+  webpImg,
   sprite,
+  cleanSpriteImg,
   html
 )
 
 exports.build = build;
+
 
 // Server
 
@@ -128,6 +144,7 @@ const server = (done) => {
 }
 
 exports.server = server;
+
 
 // Watcher
 
