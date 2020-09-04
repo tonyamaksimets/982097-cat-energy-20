@@ -67,19 +67,13 @@ const sprite = () => {
 exports.sprite = sprite;
 
 
-const cleanSpriteImg = () => {
-  return del("build/img/**/s-icon-*.svg");
-}
-
-exports.cleanSpriteImg = cleanSpriteImg;
-
-
 //Copy
 
 const copy = () => {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
+    "!source/img/**/s-icon-*.svg",
     "source/js/**"
   ], {
     base: "source"
@@ -122,7 +116,6 @@ const build = gulp.series (
   images,
   webpImg,
   sprite,
-  cleanSpriteImg,
   html
 )
 
