@@ -38,12 +38,15 @@ exports.styles = styles;
 // Images
 
 const images = () => {
-  return gulp.src("build/img/**/*.{jpg,png,svg}")
+  return gulp.src([
+    "source/img/**/*.{jpg,png,svg}",
+    "!source/img/**/s-icon-*.svg"])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
-    ]));
+    ]))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;
@@ -73,13 +76,7 @@ exports.sprite = sprite;
 //Copy
 
 const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "!source/img/**/s-icon-*.svg",
-  ], {
-    base: "source"
-  })
+  return gulp.src("source/fonts/**/*.{woff,woff2}", {base: "source"})
   .pipe(gulp.dest("build"));
 }
 
