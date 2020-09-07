@@ -23,6 +23,9 @@
 }
 
 .developer__logo {
+  position: relative;
+  left: 5px;
+
   color: $footer-link-color;
 
   .developer:hover &,
