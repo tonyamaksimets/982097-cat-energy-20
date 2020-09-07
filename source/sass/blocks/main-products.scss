@@ -42,12 +42,7 @@
     border: none;
 
     &:first-child {
-      border: none;
-    }
-
-    &:last-child {
-      background-color: $basic-background-color;
-      border: 2px solid $show-more-border-color;
+      border-top: none;
     }
   }
 }

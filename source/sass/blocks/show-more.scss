@@ -21,6 +21,10 @@
 
   @media (min-width: $tablet-width) {
     padding-top: 52px;
+
+    background-color: $basic-background-color;
+
+    border: 2px solid $show-more-border-color;
   }
 }
 

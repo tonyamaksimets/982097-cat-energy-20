@@ -25,8 +25,8 @@
 .developer__logo {
   color: $footer-link-color;
 
-  &:hover,
-  &:focus {
+  .developer:hover &,
+  .developer:focus & {
     color: $accent-color;
   }
 }

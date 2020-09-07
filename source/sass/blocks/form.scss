@@ -174,9 +174,16 @@
       border: 1px solid $form-checkbox-color;
     }
 
-    &:hover::before,
-    &:focus::before {
+    &:hover::before {
       border-color: $form-checkbox-hover-color;
+    }
+
+    .form__checkbox-field:focus + &::before {
+      outline: auto;
+    }
+
+    .form__radio-field:focus + &::before {
+      outline: auto;
     }
   }
 
@@ -186,10 +193,36 @@
     &::before {
       border-radius: 50%;
     }
+
+    .form__radio-field:checked + &::after {
+      content: "";
+
+      position: absolute;
+      top: 8px;
+      left: 8px;
+
+      display: block;
+      width: 14px;
+      height: 14px;
+
+      border-radius: 50%;
+      background-color: $accent-color;
+    }
   }
 
   &--checkbox {
     color: $dark-text-color;
+
+    .form__checkbox-field:checked + &::after {
+      content: url("../img/icon-tick.svg");
+
+      position: absolute;
+      left: 6px;
+      top: 0;
+
+      display: block;
+      width: 18px;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -205,6 +238,19 @@
         width: 38px;
         height: 38px;
       }
+    }
+
+    .form__radio-field:checked + &--radio::after {
+      top: 11px;
+      left: 11px;
+
+      width: 18px;
+      height: 18px;
+    }
+
+    .form__checkbox-field:checked + &--checkbox::after {
+      top: 0;
+      left: 11px;
     }
   }
 }
@@ -233,16 +279,8 @@
     outline: none;
   }
 
-  &:focus + .form__icon {
-    color: $accent-color;
-  }
-
   &:invalid {
     border-color: $error-color;
-  }
-
-  &:invalid + .form__icon {
-    color: $error-color;
   }
 
   &--illustrated {
@@ -267,45 +305,6 @@
       padding-top: 13px;
       height: 148px;
     }
-  }
-}
-
-.form__radio-field:checked + .form__label--radio::after {
-  content: "";
-
-  position: absolute;
-  top: 8px;
-  left: 8px;
-
-  display: block;
-  width: 14px;
-  height: 14px;
-
-  border-radius: 50%;
-  background-color: $accent-color;
-
-  @media (min-width: $tablet-width) {
-    top: 11px;
-    left: 11px;
-
-    width: 18px;
-    height: 18px;
-  }
-}
-
-.form__checkbox-field:checked + .form__label--checkbox::after {
-  content: url("../img/icon-tick.svg");
-
-  position: absolute;
-  left: 6px;
-  top: 0;
-
-  display: block;
-  width: 18px;
-
-  @media (min-width: $tablet-width) {
-    top: 0;
-    left: 11px;
   }
 }
 
@@ -355,6 +354,14 @@
   right: 17px;
 
   color: $special-text-color;
+
+  .form__text-field:invalid + & {
+    color: $error-color;
+  }
+
+  .form__text-field:focus + & {
+    color: $accent-color;
+  }
 }
 
 .form__button {
@@ -389,8 +396,6 @@
   @media (min-width: $tablet-width) {
     display: inline-block;
     margin-left: 60px;
-
-    font-size: 16px;
 
     vertical-align: 6px;
   }
