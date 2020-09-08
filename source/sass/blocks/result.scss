@@ -69,9 +69,6 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 53px;
-
-    font-size: 16px;
-    line-height: 24px;
   }
 
   @media (min-width: $desktop-width) {
@@ -194,8 +191,6 @@
   text-transform: uppercase;
   color: $dark-text-color;
 
-  vertical-align: middle;
-
   @media (min-width: $tablet-width) {
     display: inline-flex;
     flex-direction: column;
@@ -205,6 +200,8 @@
     margin-bottom: 0;
 
     font-size: 20px;
+
+    vertical-align: middle;
   }
 
   @media (min-width: $desktop-width) {
@@ -230,8 +227,8 @@
 
 .result__slider {
   @media (max-width: $mobile-only-width) {
+    margin-right: -20px;
     margin-left: -20px;
-    width: calc(100% + 20px * 2);
   }
 
   @media (min-width: $desktop-width) {

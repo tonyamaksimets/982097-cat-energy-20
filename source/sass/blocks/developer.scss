@@ -23,10 +23,13 @@
 }
 
 .developer__logo {
+  position: relative;
+  left: 5px;
+
   color: $footer-link-color;
 
-  &:hover,
-  &:focus {
+  .developer:hover &,
+  .developer:focus & {
     color: $accent-color;
   }
 }

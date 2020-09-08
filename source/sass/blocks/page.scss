@@ -15,4 +15,9 @@
   line-height: 18px;
   font-family: "Arial", sans-serif;
   color: $basic-text-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
