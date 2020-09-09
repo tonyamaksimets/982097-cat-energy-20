@@ -13,11 +13,11 @@
 
 .result__wrapper {
   padding-top: 27px;
-  padding-bottom: 37px;
+  padding-bottom: 36px;
 
   @media (min-width: $tablet-width) {
     padding-top: 43px;
-    padding-bottom: 66px;
+    padding-bottom: 67px;
   }
 
   @media (min-width: $desktop-width) {
@@ -93,7 +93,7 @@
 
   @media (min-width: $desktop-width) {
     display: table;
-    margin-bottom: 42px;
+    margin-bottom: 55px;
   }
 }
 
@@ -200,17 +200,23 @@
     display: inline-flex;
     flex-direction: column;
     align-items: flex-end;
-    float: right;
     margin-top: 12px;
+    margin-left: 150px;
     margin-bottom: 0;
+    width: calc(100% - 516px);
 
     font-size: 20px;
+
+    vertical-align: top;
   }
 
   @media (min-width: $desktop-width) {
     display: flex;
     flex-direction: row;
-    float: left;
+    justify-content: start;
+    margin-top: 0;
+    margin-left: 0;
+    width: auto;
   }
 }
 

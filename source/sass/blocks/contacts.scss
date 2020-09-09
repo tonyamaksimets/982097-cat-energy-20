@@ -110,6 +110,10 @@
   vertical-align: bottom;
 
   border: none;
+
+  @media (min-width: $tablet-width) {
+    height: 400px;
+  }
 }
 
 .contacts__image-map-wrapper {
@@ -123,8 +127,12 @@
 .contacts__image-map {
   vertical-align: bottom;
 
+  width: auto;
+  height: 362px;
+
   @media (min-width: $tablet-width) {
     width: 767px;
+    height: 400px;
   }
 
   @media (min-width: $desktop-width) {
@@ -134,8 +142,8 @@
 
 .contacts__image-map-pin {
   position: absolute;
-  left: 70px;
-  top: 150px;
+  left: 50px;
+  top: 125px;
 
   @media (min-width: $tablet-width) {
     left: 280px;
