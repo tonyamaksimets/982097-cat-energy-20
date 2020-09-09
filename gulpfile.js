@@ -9,6 +9,9 @@ const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
+const pipeline = require('readable-stream').pipeline;
 const del = require("del");
 const sync = require("browser-sync").create();
 
@@ -36,12 +39,15 @@ exports.styles = styles;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src([
+    "source/img/**/*.{jpg,png,svg}",
+    "!source/img/**/s-icon-*.svg"])
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true}),
       imagemin.svgo()
-    ]));
+    ]))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.images = images;
@@ -71,14 +77,7 @@ exports.sprite = sprite;
 //Copy
 
 const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "!source/img/**/s-icon-*.svg",
-    "source/js/**"
-  ], {
-    base: "source"
-  })
+  return gulp.src("source/fonts/**/*.{woff,woff2}", {base: "source"})
   .pipe(gulp.dest("build"));
 }
 
@@ -97,27 +96,38 @@ exports.clean = clean;
 //Html
 
 const html = () => {
-  return gulp.src([
-    "source/*.html"
-  ], {
-    base: "source"
-  })
+  return gulp.src("source/*.html")
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
 
 
+// JS
+const compress = () => {
+  return pipeline(
+    gulp.src("source/js/*.js"),
+    uglify(),
+    rename({suffix: ".min"}),
+    gulp.dest("build/js")
+  );
+}
+
+exports.compress = compress;
+
+
 //Build
 
 const build = gulp.series (
   clean,
+  html,
   copy,
   styles,
   images,
   webpImg,
   sprite,
-  html
+  compress
 )
 
 exports.build = build;
@@ -128,7 +138,7 @@ exports.build = build;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,

@@ -44,7 +44,7 @@
 .food-info__list {
   @include list-style-reset;
 
-  counter-reset: info-itens;
+  counter-reset: info-items;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -84,6 +84,7 @@
     background-color: $accent-color;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 50px 50px;
   }
 
   @media (min-width: $tablet-width) {
@@ -91,12 +92,8 @@
     padding-top: 40px;
     padding-right: 90px;
     padding-left: 0;
-    padding-bottom: 57px;
     width: 50%;
     min-height: 280px;
-
-    font-size: 16px;
-    line-height: 24px;
 
     &:nth-child(2n) {
       padding-left: 30px;

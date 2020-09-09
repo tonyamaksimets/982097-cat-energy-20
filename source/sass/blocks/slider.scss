@@ -12,11 +12,8 @@
   width: 320px;
 
   @media (min-width: $tablet-width) {
-    // position: relative;
-    // left: 10px;
-
     width: 708px;
-    margin-bottom: 11px;
+    margin-bottom: 8px;
   }
 
   @media (min-width: $desktop-width) {
@@ -92,7 +89,11 @@
     bottom: 72px;
     z-index: 2;
 
-    margin: 0 auto;
+    &--nojs {
+      left: 0;
+
+      width: 100%;
+    }
   }
 }
 
