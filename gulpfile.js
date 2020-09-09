@@ -25,6 +25,7 @@ const styles = () => {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -155,6 +156,7 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html", gulp.series("html"));
   gulp.watch("build/*.html").on("change", sync.reload);
+  gulp.watch("source/js/**/*.js", gulp.series("compress"));
 }
 
 exports.default = gulp.series(

@@ -52,7 +52,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    padding-bottom: 132px;
+    padding-bottom: 130px;
 
     &--before {
       padding-left: 0;
@@ -86,7 +86,7 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     left: 82px;
-    bottom: 68px;
+    bottom: 72px;
     z-index: 2;
 
     &--nojs {
@@ -98,7 +98,7 @@
 }
 
 .slider__controls-legend {
-  @include paragraph-style-reset;
+  @include button-style-reset;
 
   margin-right: 18px;
   font-size: 16px;
@@ -106,6 +106,23 @@
   font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   color: $dark-text-color;
+
+  border-bottom: 1px solid transparent;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid rgba($range-underline-color, 0.4);
+  }
+
+  &:active {
+    border-bottom: 1px solid transparent;
+  }
+
+  &:disabled {
+    border-bottom: 1px solid transparent;
+
+    cursor: auto;
+  }
 
   &:nth-of-type(2) {
     margin-right: 0;
@@ -118,7 +135,7 @@
     font-size: 20px;
     line-height: 30px;
 
-    border-bottom: 2px dotted $dark-border-color;
+    border-bottom: 1px dotted $dark-border-color;
 
     &:nth-of-type(2) {
       margin-left: 19px;
@@ -204,7 +221,17 @@
     background-color: $basic-background-color;
 
     border: 1px solid $range-border-color;
-    box-shadow: 0 1px 3px rgba($dark-text-color, 0.16);
+    box-shadow: 0 1px 3px rgba($range-underline-color, 0.16);
+
+    &:hover,
+    &:focus {
+      box-shadow: 0 2px 4px rgba($range-underline-color, 0.19);
+    }
+
+    &:active {
+      border-color: $accent-color;
+      box-shadow: 0 3px 5px rgba($range-underline-color, 0.2);
+    }
 
     &::before {
       content: "";

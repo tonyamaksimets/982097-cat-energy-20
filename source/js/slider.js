@@ -5,7 +5,12 @@ var bar = range.querySelector('.slider__bar');
 
 var before = document.querySelector('.slider__photo-wrapper--before');
 
+var buttonBefore = document.querySelector('.slider__controls-legend--before');
+var buttonAfter = document.querySelector('.slider__controls-legend--after');
+
 controls.classList.remove('slider__controls--nojs');
+buttonBefore.removeAttribute("disabled");
+buttonAfter.removeAttribute("disabled");
 
 var rangeClientCoords = range.getBoundingClientRect();
 
@@ -44,3 +49,15 @@ toggle.onmousedown = function(event) {
 toggle.ondragstart = function() {
   return false;
 };
+
+buttonBefore.addEventListener('click', function() {
+    toggle.style.left = 100 + '%';
+    bar.style.width = 100 + '%';
+    before.style.width = 100 + '%';
+});
+
+buttonAfter.addEventListener('click', function() {
+    toggle.style.left = 0 + '%';
+    bar.style.width = 0 + '%';
+    before.style.width = 0 + '%';
+});
