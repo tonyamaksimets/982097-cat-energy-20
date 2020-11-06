@@ -14,6 +14,8 @@ const uglify = require('gulp-uglify');
 const pipeline = require('readable-stream').pipeline;
 const del = require("del");
 const sync = require("browser-sync").create();
+const ghPages = require('gh-pages');
+const path = require('path');
 
 // Styles
 
@@ -116,6 +118,14 @@ const compress = () => {
 
 exports.compress = compress;
 
+//Deploy
+
+const deploy = (cb) => {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+
+exports.deploy = deploy;
+
 
 //Build
 
@@ -127,7 +137,8 @@ const build = gulp.series (
   images,
   webpImg,
   sprite,
-  compress
+  compress,
+  deploy
 )
 
 exports.build = build;
